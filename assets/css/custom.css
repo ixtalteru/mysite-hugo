@@ -141,8 +141,8 @@ footer .navbar-brand img {
 
   footer .navbar-brand svg,
   footer .navbar-brand img {
-    height: 80px;
-    transform: translateY(-22px);
+    height: 70px;
+    transform: translateY(-28px);
   }
 }
 
@@ -342,4 +342,44 @@ hr {
 .drawing-figure {
   background: transparent !important;
   color: inherit !important;
+}
+
+/* iPhone Safari header fix */
+@media (max-width: 480px) {
+
+  header {
+    min-height: 64px;
+    height: auto;
+    align-items: center;
+  }
+
+  header .navbar-brand img,
+  header .navbar-brand svg {
+    height: 56px;              /* ← ここ重要 */
+    transform: translateY(0);  /* はみ出し禁止 */
+  }
+
+  .navbar-toggler,
+  .menu-toggle,
+  button[aria-label="menu"] {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  /* 言語セレクタ */
+  select,
+  .language-switcher {
+    max-width: 90px;       /* iPhone用に縮める */
+    font-size: 14px;
+  }
+
+  /* アイコン系 */
+  .theme-toggle,
+  .search-toggle {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
 }
