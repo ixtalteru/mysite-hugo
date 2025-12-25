@@ -73,7 +73,7 @@ header {
 /* SVG / IMG 共通 */
 header .navbar-brand svg,
 header .navbar-brand img {
-  height: 110px;          /* ロゴは大きいまま */
+  height: 60px;          /* ロゴは大きいまま */
   width: auto;
   transform: translateY(5px); /* 上にはみ出す */
 }
@@ -114,9 +114,9 @@ footer .navbar-brand {
 /* SVG / IMG 共通 */
 footer .navbar-brand svg,
 footer .navbar-brand img {
-  height: 110px;          /* ロゴは大きいまま */
+  height: 55px;          /* ロゴは大きいまま */
   width: auto;
-  transform: translateY(-32px); /* 上にはみ出す */
+  transform: translateY(-63px); /* 上にはみ出す */
 }
 
 /*--------------------------------
@@ -129,8 +129,8 @@ footer .navbar-brand img {
 
   header .navbar-brand svg,
   header .navbar-brand img {
-    height: 80px;
-    transform: translateY(5px);
+    height: 30px;
+    transform: translateY(0px);
   }
 }
 
@@ -141,8 +141,8 @@ footer .navbar-brand img {
 
   footer .navbar-brand svg,
   footer .navbar-brand img {
-    height: 70px;
-    transform: translateY(-28px);
+    height: 30px;
+    transform: translateY(-50px);
   }
 }
 
@@ -351,12 +351,6 @@ hr {
     min-height: 64px;
     height: auto;
     align-items: center;
-  }
-
-  header .navbar-brand img,
-  header .navbar-brand svg {
-    height: 56px;              /* ← ここ重要 */
-    transform: translateY(0);  /* はみ出し禁止 */
   }
 
   .navbar-toggler,

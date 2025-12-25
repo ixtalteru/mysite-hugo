@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 3840 2160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="レイヤー1" transform="matrix(0.546728,0,0,0.546728,112.574,-91.7816)">
-        <g transform="matrix(1.82906,-0,-0,1.82906,-205.905,167.874)">
-            <use xlink:href="#_Image1" x="703.38" y="1252.11" width="2472px" height="241px"/>
+<svg width="100%" height="100%" viewBox="0 0 3500 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="_Image1_" serif:id="_Image1" transform="matrix(0.999998,0,0,0.999998,533.379,772.108)">
+        <g id="レイヤー1">
+            <g>
+                <use id="_Image1_1" serif:id="_Image1" xlink:href="#_Image1" x="0" y="0" width="2472px" height="241px"/>
+            </g>
         </g>
     </g>
-    <g id="レイヤー2" transform="matrix(1.28388,0,0,1.28388,-168.251,-396.872)">
-        <g transform="matrix(0.778889,-0,-0,0.778889,131.049,309.119)">
-            <use xlink:href="#_Image2" x="233.776" y="491.94" width="3400px" height="756px"/>
+    <g id="_Image2_" serif:id="_Image2" transform="matrix(1,0,0,1,63.7762,11.9397)">
+        <g id="レイヤー2">
+            <g>
+                <use id="_Image2_1" serif:id="_Image2" xlink:href="#_Image2" x="0" y="0" width="3400px" height="756px"/>
+            </g>
         </g>
     </g>
     <defs>
