@@ -58,13 +58,20 @@ body {
 }
 
 /* ヘッダー背景 */
-header {
-  background: rgba(229,250,232,.75) !important;
-  backdrop-filter: blur(10px);
+header.header {
+  background-color: rgba(210, 245, 225, 0.82) !important; /* ← ここ */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(44, 140, 110, 0.22);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.dark header {
-  background: rgba(54,71,55,.75) !important;
+/* ダークモード */
+.dark header.header {
+  background-color: rgba(45, 60, 52, 0.78) !important;
+  border-bottom: 1px solid rgba(120, 200, 160, 0.22);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
 }
 
 /* ロゴ hover */
@@ -139,14 +146,6 @@ header {
     height: 42px;
   }
 
-  .navbar-collapse {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-  }
-
   .navbar-toggler {
     position: static !important;
     margin: 0 !important;
@@ -157,6 +156,36 @@ header {
   .navbar-toggler {
     width: 32px;
     height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header nav.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 操作系（検索・言語・テーマ・ハンバーガー） */
+  header nav > .order-1 {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* メニュー（初期は非表示） */
+  #nav-menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .75rem;
+  }
+
+  /* チェックされたら表示（Hugoplate標準） */
+  #nav-toggle:checked ~ #nav-menu {
+    display: flex;
   }
 }
 
