@@ -1,0 +1,27 @@
+{{/*
+  usage:
+  {{< blueprint src="20251212_ヘッドバンド元寸法.jpg" title="ヘッドバンド元寸法" >}}
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $title := .Get "title" }}
+
+<div class="my-6 text-center">
+  <a href="{{ $src | relURL }}"
+     class="glightbox"
+     data-gallery="blueprints"
+     data-title="{{ $title }}">
+
+    <img
+      src="{{ $src | relURL }}"
+      alt="{{ $title }}"
+      class="mx-auto max-w-[85%] rounded-lg shadow-md cursor-zoom-in"
+      loading="lazy" />
+  </a>
+
+  {{ if $title }}
+  <p class="mt-2 text-sm opacity-70">
+    {{ $title }}
+  </p>
+  {{ end }}
+</div>

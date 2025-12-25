@@ -3,16 +3,17 @@
   {{ if not (eq (len site.Taxonomies.tags) 0) }}
     <div class="mb-8">
       <h5 class="mb-6">{{ T "tags" | default "Tags" }}</h5>
-      <div class="bg-light dark:bg-darkmode-light rounded p-6">
-        <ul>
+
+      <div class="bg-light dark:bg-darkmode-light rounded p-8">
+        <ul class="flex flex-wrap gap-3">
           {{ range $name, $items := site.Taxonomies.tags }}
-            <li class="inline-block">
+            {{ $key := printf "tag_%s" $name }}
+            <li>
               <a
-                class="hover:bg-primary dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark {{ if (and (eq $.Page.Kind `term`) (eq $.Page.Type `tags`) (eq $.Page.Title .Page.Title)) }}
-                  active
-                {{ end }} m-1 block rounded bg-white px-3 py-1 hover:text-white"
-                href="{{ .Page.RelPermalink }}">
-                {{ .Page.Title }}
+                href="{{ .Page.RelPermalink }}"
+                class="bg-body dark:bg-darkmode-body px-4 py-2 rounded text-sm hover:text-primary dark:hover:text-darkmode-primary"
+              >
+                {{ T $key | default .Page.Title }}
               </a>
             </li>
           {{ end }}

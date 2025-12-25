@@ -1,0 +1,26 @@
+# main menu
+[[main]]
+identifier = "home"
+name = "ホーム"
+url = "/"
+weight = 1
+
+[[main]]
+identifier = "blog"
+name = "記事"
+url = "/blog/"
+weight = 2
+
+
+# footer menu
+[[footer]]
+identifier = "home"
+name = "ホーム"
+url = "/"
+weight = 1
+
+[[footer]]
+identifier = "blog"
+name = "記事"
+url = "/blog/"
+weight = 2

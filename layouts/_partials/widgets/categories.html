@@ -6,13 +6,13 @@
       <div class="bg-light dark:bg-darkmode-light rounded p-8">
         <ul class="space-y-4">
           {{ range $name, $items := site.Taxonomies.categories }}
+            {{ $key := printf "category_%s" $name }}
             <li>
               <a
-                class="hover:text-primary dark:hover:text-darkmode-primary {{ if (and (eq $.Page.Kind `term`) (eq $.Page.Type `categories`) (eq $.Page.Title .Page.Title)) }}
-                  active
-                {{ end }} flex justify-between"
+                class="hover:text-primary dark:hover:text-darkmode-primary flex justify-between"
                 href="{{ .Page.RelPermalink }}">
-                {{ .Page.Title }} <span>( {{ len $items }} )</span>
+                {{ T $key | default .Page.Title }}
+                <span>( {{ len $items }} )</span>
               </a>
             </li>
           {{ end }}

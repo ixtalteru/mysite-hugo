@@ -1,0 +1,10 @@
+[en]
+languageName = "English"
+weight = 1
+contentDir = "content/en"
+
+[ja]
+languageName = "日本語"
+weight = 2
+contentDir = "content/ja"
+

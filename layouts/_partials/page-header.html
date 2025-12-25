@@ -2,7 +2,22 @@
   <div class="container text-center">
     <div
       class="from-body to-light dark:from-darkmode-body dark:to-darkmode-light rounded-2xl bg-gradient-to-b px-8 py-14">
-      <h1>{{ T (printf "%s" (lower .Title)) | default .Title | title }}</h1>
+
+      {{/* ===== ヘッダータイトル ===== */}}
+      {{ if and (eq .Kind "term") (eq .Type "tags") }}
+        {{/* タグページ */}}
+        {{ $key := printf "tag_%s" (lower .Title) }}
+        <h1>{{ T $key | default .Title }}</h1>
+
+      {{ else if and (eq .Kind "term") (eq .Type "categories") }}
+        {{/* カテゴリページ */}}
+        <h1>{{ .Title }}</h1>
+
+      {{ else }}
+        {{/* 通常ページ */}}
+        <h1>{{ T (lower .Title) | default .Title }}</h1>
+      {{ end }}
+
       {{ partial "components/breadcrumb" (dict "Context" . "Class" "mt-6") }}
     </div>
   </div>

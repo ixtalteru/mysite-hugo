@@ -1,0 +1,7 @@
+[goldmark]
+  [goldmark.renderer]
+    hardWraps = true
+    unsafe = true
+
+  [goldmark.parser]
+    autoHeadingID = true

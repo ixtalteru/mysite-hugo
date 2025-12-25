@@ -1,0 +1,26 @@
+{{/* drawing shortcode */}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" | default "" }}
+{{ $width := .Get "width" | default "800" }}
+
+{{ with .Page.Resources.GetMatch $src }}
+  {{ $img := .Resize (printf "%sx" $width) }}
+
+  <figure class="drawing-figure">
+    <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="drawings">
+      <img
+        src="{{ $img.RelPermalink }}"
+        alt="{{ $alt }}"
+        loading="lazy"
+      >
+    </a>
+
+    {{ if $caption }}
+      <figcaption>{{ $caption }}</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  <p style="color:red">[drawing] image not found: {{ $src }}</p>
+{{ end }}

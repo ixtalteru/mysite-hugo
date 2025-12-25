@@ -1,17 +1,15 @@
-Thumbs.db
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Node.js
+/node_modules/
+
+# OS / editor
 .DS_Store
-.dist
-.tmp
-.lock
-.sass-cache
-npm-debug.log
-node_modules
-builds
-package-lock.json
-public
-resources
+Thumbs.db
+
+# Hugo temporary files
 .hugo_build.lock
-jsconfig.json
 hugo_stats.json
-go.sum
-yarn.lock
+

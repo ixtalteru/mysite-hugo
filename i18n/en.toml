@@ -1,0 +1,14 @@
+[language]
+other = "English"
+
+[language-switch]
+other = "Change Language"
+
+[categories]
+other = "Categories"
+
+[table_of_contents]
+other = "Contents"
+
+[open_toc]
+other = "Open contents"

@@ -1,2 +1,345 @@
-/* DO NOT WRITE ANY STYLE IN THIS FILE */
-/* If you want to add your own styles, please write it in the `./assets/css/custom.css` file. */
+/* Add your own custom styles here */
+
+/*--------------------------------
+  フォント - やさしさゴシック
+--------------------------------*/
+@font-face {
+  font-family: 'Yasashisa Gothic';
+  src: url('/fonts/YasashisaGothicBold-V2.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Yasashisa Gothic', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.65;
+}
+
+/*--------------------------------
+  背景
+--------------------------------*/
+body {
+  background: linear-gradient(
+    to bottom,
+    rgba(249,255,249,.95) 0%,
+    rgba(229,250,232,.95) 35%,
+    rgba(199,238,210,.95) 100%
+  ) !important;
+}
+
+.dark body {
+  background: linear-gradient(
+    to bottom,
+    rgba(42,53,46,.95) 0%,
+    rgba(54,71,55,.95) 50%,
+    rgba(31,42,36,.95) 100%
+  ) !important;
+}
+
+/*--------------------------------
+  ロゴの背景・影・角丸を完全排除
+--------------------------------*/
+.navbar-brand,
+.navbar-brand *,
+.navbar-brand-wrapper,
+.logo-wrapper,
+.brand-logo,
+.navbar-brand > div {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/*--------------------------------
+  Header
+--------------------------------*/
+header {
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+  background: rgba(229,250,232,.75) !important;
+  backdrop-filter: blur(10px);
+}
+
+.dark header {
+  background: rgba(54,71,55,.75) !important;
+}
+
+/* SVG / IMG 共通 */
+header .navbar-brand svg,
+header .navbar-brand img {
+  height: 110px;          /* ロゴは大きいまま */
+  width: auto;
+  transform: translateY(5px); /* 上にはみ出す */
+}
+
+/*--------------------------------
+  Footer
+--------------------------------*/
+footer,
+.site-footer {
+  position: relative;
+  height: 120px;                 /* ← ヘッダーと同じ */
+  padding: 0 !important;
+  background: rgba(225,245,230,.95) !important;
+  border-top: 1px solid rgba(44,140,110,.15);
+  overflow: visible;            /* ← ロゴはみ出し許可 */
+}
+
+.dark footer {
+  background: rgba(60,75,62,.96) !important;
+}
+
+/* 中身の row */
+footer .row.items-center {
+  height: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+/*--------------------------------
+  Footer ロゴ制御（重要）
+--------------------------------*/
+footer .navbar-brand {
+  position: absolute;
+  left: 1rem;
+  bottom: 0;
+}
+
+/* SVG / IMG 共通 */
+footer .navbar-brand svg,
+footer .navbar-brand img {
+  height: 110px;          /* ロゴは大きいまま */
+  width: auto;
+  transform: translateY(-32px); /* 上にはみ出す */
+}
+
+/*--------------------------------
+  モバイル調整
+--------------------------------*/
+@media (max-width: 768px) {
+  header {
+    height: 70px;
+  }
+
+  header .navbar-brand svg,
+  header .navbar-brand img {
+    height: 80px;
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 90px;
+  }
+
+  footer .navbar-brand svg,
+  footer .navbar-brand img {
+    height: 80px;
+    transform: translateY(-22px);
+  }
+}
+
+/*--------------------------------
+  Container
+--------------------------------*/
+.container {
+  max-width: 860px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+/*--------------------------------
+  Section spacing
+--------------------------------*/
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/*--------------------------------
+  見出し
+--------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Yasashisa Gothic', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: .03em;
+}
+
+h2 {
+  border-bottom: 4px solid rgba(44,140,110,.45);
+  display: inline-block;
+  padding-bottom: .25rem;
+}
+
+/*--------------------------------
+  Accent color
+--------------------------------*/
+:root {
+  --accent: #2C8C6E;
+}
+
+a,
+.btn-primary {
+  color: var(--accent) !important;
+}
+
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.btn-primary:hover {
+  opacity: .85;
+}
+
+/*--------------------------------
+  ロゴ hover
+--------------------------------*/
+.navbar-brand:hover {
+  opacity: .9;
+  transform: scale(1.02);
+  transition: .2s;
+}
+
+/*--------------------------------
+  Images / cards
+--------------------------------*/
+img,
+.card,
+.feature-box {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+/*--------------------------------
+  Paragraphs
+--------------------------------*/
+p {
+  margin-bottom: 1.4rem;
+  font-size: 1.05rem;
+}
+
+/*--------------------------------
+  Blockquotes
+--------------------------------*/
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  opacity: .9;
+}
+
+/*--------------------------------
+  ダーク時は影を少し追加
+--------------------------------*/
+.dark .navbar-brand img {
+  filter: drop-shadow(0 0 2px rgba(0,0,0,.35));
+}
+
+/* TOC active highlight */
+.toc a.active {
+  color: #2563eb; /* blue-600 */
+  font-weight: 600;
+  border-left: 3px solid #2563eb;
+  padding-left: 0.5rem;
+}
+
+/* モバイル TOC */
+.toc-mobile summary {
+  list-style: none;
+}
+
+.toc-mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-mobile summary::after {
+  content: "＋";
+  float: right;
+  font-weight: bold;
+}
+
+.toc-mobile[open] summary::after {
+  content: "－";
+}
+
+/* 記事本文内の画像サイズ調整 */
+.content img {
+  max-width: 70%;        /* ← 好みで 70〜90% */
+  height: auto;
+  display: block;
+  margin: 2rem auto;     /* 中央寄せ */
+}
+
+/* ==============================
+   Blueprint (図面) shortcode
+============================== */
+
+.blueprint-figure {
+  max-width: 720px;
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.blueprint-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: zoom-in;
+}
+
+.blueprint-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+
+.blueprint-caption {
+  margin-top: .75rem;
+  font-size: .9rem;
+  opacity: .75;
+}
+
+/* モバイルでは少し余白を減らす */
+@media (max-width: 768px) {
+  .blueprint-figure {
+    margin: 1.8rem auto;
+  }
+}
+
+/* ---- 区切り線（hr）の視認性改善 ---- */
+hr {
+  border: none;
+  border-top: 2px solid rgba(65, 111, 135, 0.18); /* グレー寄り */
+  margin: 3rem 0;
+}
+
+/* hr 前後の余白を少し詰める */
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- TOC 周りの区切り ---- */
+.toc,
+.table-of-contents {
+  border-left: 3px solid rgba(60, 140, 110, 0.4);
+  padding-left: 1rem;
+}
+
+.drawing-block {
+  display: block;
+  margin: 2rem 0;
+}
+
+.drawing-figure {
+  background: transparent !important;
+  color: inherit !important;
+}

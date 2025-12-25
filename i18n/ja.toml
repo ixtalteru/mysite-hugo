@@ -1,0 +1,14 @@
+[language]
+other = "日本語"
+
+[language-switch]
+other = "言語変更"
+
+[categories]
+other = "カテゴリー"
+
+[table_of_contents]
+other = "コンテンツ"
+
+[open_toc]
+other = "コンテンツを開く"
