@@ -339,3 +339,16 @@ blockquote {
   font-size: .9rem;
   opacity: .75;
 }
+
+/* =========================================================
+
+========================================================= */
+.affiliate-note {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dark .affiliate-note {
+  color: #aaa;
+}

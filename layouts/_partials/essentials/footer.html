@@ -48,7 +48,13 @@
 
   <div class="border-t border-border dark:border-darkmode-border py-2">
     <div class="container text-center text-text-light dark:text-darkmode-text-light text-sm">
+
       {{ site.Params.copyright | markdownify }}
+
+      <div class="affiliate-note">
+        {{ i18n "amazon_affiliate_notice" }}
+      </div>
+
     </div>
   </div>
 </footer>

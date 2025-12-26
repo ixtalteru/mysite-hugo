@@ -35,8 +35,8 @@ tags: ["fix", "audio"]
 ## イヤーパッド紹介
 次にイヤーパッドの紹介だ。
 おいらの動画にもあるように今回はYAXIのEARPADS stPad for SONY MDR-CD900stという商品をチョイスしている。
-[![YAXI EARPADS stPad for SONY MDR-CD900st/7506 ヤクシーイヤーパッド (Black(ブラック))](https://www.yaxi.jp/cdn/shop/files/package1_c6beb58a-706f-4d84-83e8-e8d7bf0a1e28.jpg?v=1763477734&width=1200)](https://www.amazon.co.jp/dp/B00N9RUK74?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
-[YAXI EARPADS stPad for SONY MDR-CD900st/7506 ヤクシーイヤーパッド (Black(ブラック)](https://www.amazon.co.jp/dp/B00N9RUK74?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+[![YAXI EARPADS stPad for SONY MDR-CD900st/7506 ヤクシーイヤーパッド (Black(ブラック))](https://www.yaxi.jp/cdn/shop/files/package1_c6beb58a-706f-4d84-83e8-e8d7bf0a1e28.jpg?v=1763477734&width=1200)](https://www.amazon.co.jp/dp/B00N9RUK74?th=1&linkCode=ll1&tag=ixtal01-22)
+[YAXI EARPADS stPad for SONY MDR-CD900st/7506 ヤクシーイヤーパッド (Black(ブラック)](https://www.amazon.co.jp/dp/B00N9RUK74?th=1&linkCode=ll1&tag=ixtal01-22)
 このイヤーパッドは公式にMDR-1RBT用とは謳っていないが大丈夫、MDR-1RBTにもくっつく。
 他にも安いイヤーパッドは沢山あるけど耐久性には疑問が残る。
 後は安いイヤーパッドをこまめに交換するか、高いイヤーパッドを長く使うか、それは君たち次第だ。
