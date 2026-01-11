@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = true
 ########################### Services #############################
 [services]
 [services.googleAnalytics]
-ID = 'G-C2VPYNRGC3' # see https://gohugo.io/templates/internal/#configure-google-analytics
+ID = '' # see https://gohugo.io/templates/internal/#configure-google-analytics
 
 ########################## Permalinks ############################
 [permalinks.page]
