@@ -7,8 +7,7 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# Setting a Static IP Address
-Hey guys!
+## Hey guys!
 It's Juke here.
 This time, we're going to set a static IP address on an Ubuntu server.
 The version I'm using is Ubuntu Server 22.04.3.

@@ -7,16 +7,16 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# Setting Up a gonic Server
-Hey guys!
+## Hey guys!
 It's Juke here.
 This time, I tried setting up a gonic server.
 I used Ubuntu Server version 22.04.3 on a Raspberry Pi.
 Check out my video for an overview of the setup.
+Alright, let's get started.
+* * *
+## Video
 [![Video](cover.jpg)](https://youtu.be/xf4YiUaIYI0)
 【Build】 Let's build a music streaming server with gonic! 【JUKE UNOTSUKI】
-
-Alright, let's get started.
 * * *
 ## Before You Begin
 Everything written here is also in the official installation manual.

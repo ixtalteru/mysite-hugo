@@ -7,16 +7,16 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# gonicサーバーの構築
-やぁみんな。
+## やぁみんな。
 ジュークだよ。
 今回は、gonicサーバーの構築に挑戦したよ。
 設定したのはRaspberryPiのUbuntuサーバーのバージョン22.04.3だ。
 構築の概要は、おいらの動画を見てくれ。
+それじゃぁ行ってみよー。
+* * *
+## 動画
 [![Video](cover.jpg)](https://youtu.be/xf4YiUaIYI0)
 【構築】 gonic で 音楽ストリーミングサーバー を 作ろう! 【宇ノ月ジューク / JUKE UNOTSUKI】
-
-それじゃぁ行ってみよー。
 * * *
 ## 最初に
 ここに書いてあることは、全部公式のインストールマニュアルに書いてある。

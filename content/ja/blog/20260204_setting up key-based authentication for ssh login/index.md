@@ -7,8 +7,7 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# SSHログインの鍵認証設定について
-やぁみんな。
+## やぁみんな。
 ジュークだよ。
 今回は、UbuntuサーバーのSSH接続を鍵認証にしたよ。
 設定したのはUbuntuサーバーのバージョン22.04.3だ。

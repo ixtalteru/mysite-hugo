@@ -7,8 +7,7 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# Setting Up Key-Based Authentication for SSH Login
-Hey guys!
+## Hey guys!
 It's Juke here.
 This time, I set up key-based authentication for SSH connections on my Ubuntu server.
 The version I configured is Ubuntu Server 22.04.3.

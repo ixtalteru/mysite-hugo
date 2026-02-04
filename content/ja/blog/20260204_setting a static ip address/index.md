@@ -7,8 +7,7 @@ image: "cover.jpg"
 categories: ["blog"]
 tags: ["build", "server"]
 ---
-# IPの固定について
-やぁみんな。
+## やぁみんな。
 ジュークだよ。
 今回は、UbuntuサーバーのIPアドレスを固定していくよ。
 設定したのはUbuntuサーバーのバージョン22.04.3だ。
