@@ -496,10 +496,51 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
   font-weight: 600;  /* 見出しに馴染ませる */
 }
 
-@media (prefers-color-scheme: dark) {
-  h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
-    background-color: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.22);
-    color: #e6edf3;
-  }
+/* ===== 見出しとインラインコード：ライト固定 ===== */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: #111 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+.content h1 code, .content h2 code, .content h3 code, .content h4 code, .content h5 code, .content h6 code {
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+  background-color: rgba(0,0,0,0.06) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  opacity: 1 !important;
+}
+
+/* バッククオート風の装飾を殺す */
+.content h1 code::before, .content h1 code::after,
+.content h2 code::before, .content h2 code::after,
+.content h3 code::before, .content h3 code::after,
+.content h4 code::before, .content h4 code::after,
+.content h5 code::before, .content h5 code::after,
+.content h6 code::before, .content h6 code::after {
+  content: none !important;
+}
+
+/* ===== ダークテーマは .dark クラスで切替 ===== */
+.dark .content h1, .dark .content h2, .dark .content h3, .dark .content h4, .dark .content h5, .dark .content h6 {
+  color: #e6edf3 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #e6edf3 !important;
+}
+
+.dark .content h1 code, .dark .content h2 code, .dark .content h3 code, .dark .content h4 code, .dark .content h5 code, .dark .content h6 code {
+  color: #e6edf3 !important;
+  -webkit-text-fill-color: #e6edf3 !important;
+  background-color: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  opacity: 1 !important;
+}
+
+/* =========================================================
+
+========================================================= */
+/* モバイルで長いURLがはみ出すのを防ぐ */
+.content a {
+  overflow-wrap: anywhere;   /* どこでも改行してOK */
+  word-break: break-word;    /* 古いブラウザ向け保険 */
 }

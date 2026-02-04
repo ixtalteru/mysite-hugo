@@ -15,7 +15,8 @@
         <h1 class="h2 mb-4">{{ .Title }}</h1>
 
         <!-- メタ情報 -->
-        <ul class="mb-6 text-sm opacity-80">
+        <!-- DEBUG: layouts/blog/single.html is used -->
+        <ul class="mb-6 text-sm text-black/70 dark:text-white/70">
           <li class="inline-block mr-4">
             <i class="fa-regular fa-folder mr-1"></i>
             {{ range $i, $c := .Params.categories }}
