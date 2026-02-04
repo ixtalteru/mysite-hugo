@@ -1,0 +1,4 @@
+---
+title: "サーバー"
+slug: "server"
+---

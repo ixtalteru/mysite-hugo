@@ -352,3 +352,154 @@ blockquote {
 .dark .affiliate-note {
   color: #aaa;
 }
+
+/* =========================================================
+
+========================================================= */
+/* インライン code の前後に付けられる装飾バッククオートを無効化 */
+p code::before, p code::after,
+li code::before, li code::after,
+td code::before, td code::after,
+blockquote code::before, blockquote code::after {
+  content: none !important;
+}
+
+/* インラインコード：実線ボーダーで囲む */
+p code,
+li code,
+td code,
+blockquote code {
+  background-color: rgba(255, 255, 255, 0.6); /* 背景は薄く */
+  border: 1px solid rgba(0, 0, 0, 0.18);      /* ← 実線 */
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* =========================================================
+
+========================================================= */
+.codeblock {
+  position: relative;
+  margin: 1rem 0;
+}
+
+/* Copyボタン */
+.codeblock .copy-btn {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  z-index: 10;
+
+  padding: 0.18rem 0.45rem;
+  font-size: 0.75rem;
+  border-radius: 8px;
+}
+
+/* モバイル：Copyボタンの視認性＆タップ性を上げる */
+@media (max-width: 640px) {
+  .codeblock .copy-btn {
+    /* 見えるようにする */
+    opacity: 1 !important;
+    color: #111 !important;
+
+    /* 背景をはっきり（薄いグレー） */
+    background: rgba(255, 255, 255, 0.92) !important;
+    border: 1px solid rgba(0, 0, 0, 0.25) !important;
+
+    /* 少し大きくしてタップしやすく */
+    font-size: 0.85rem !important;
+    padding: 0.35rem 0.6rem !important;
+    border-radius: 10px !important;
+
+    /* iPhoneのタップ領域を確保 */
+    min-height: 36px;
+    min-width: 58px;
+
+    /* 位置を微調整 */
+    top: 0.6rem !important;
+    right: 0.6rem !important;
+
+    /* 確実に前面に */
+    z-index: 50 !important;
+
+    /* うっすら影で浮かせる */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+}
+
+/* ===== モバイル最適化（Copyボタン微調整） ===== */
+@media (max-width: 640px) {
+  .codeblock .copy-btn {
+    /* サイズを一段階下げる */
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 8px !important;
+
+    /* タップ領域は確保しつつ控えめに */
+    min-height: 32px;
+    min-width: 52px;
+
+    /* ヘッダーより前に出ないようにする */
+    z-index: 5 !important;
+
+    /* 位置を少し下げる（ヘッダー回避） */
+    top: 0.8rem !important;
+    right: 0.6rem !important;
+  }
+}
+
+/* コード本体 */
+.codeblock pre {
+  padding: 1.25rem 1.25rem;
+  padding-top: 3rem;           /* ボタンぶん */
+  border-radius: 16px;
+  overflow: auto;
+  background: rgba(0,0,0,0.80); /* ダーク向け */
+  color: #e6edf3;
+}
+
+/* ライトモードのときは少し明るく（任意） */
+@media (prefers-color-scheme: light) {
+  .codeblock pre {
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+  }
+  .codeblock .copy-btn {
+    border: 1px solid rgba(0,0,0,0.18);
+    background: rgba(255,255,255,0.7);
+  }
+}
+
+/* =========================================================
+
+========================================================= */
+/* 見出し内の code に付けられるバッククオート装飾を無効化 */
+h1 code::before, h1 code::after,
+h2 code::before, h2 code::after,
+h3 code::before, h3 code::after,
+h4 code::before, h4 code::after,
+h5 code::before, h5 code::after,
+h6 code::before, h6 code::after {
+  content: none !important;
+}
+
+/* 見出し内の inline code は控えめに（背景薄め・枠なしでもOK） */
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  background-color: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 0.08em 0.35em;
+  border-radius: 6px;
+  font-size: 0.85em; /* 見出しサイズに対して少し小さく */
+  font-weight: 600;  /* 見出しに馴染ませる */
+}
+
+@media (prefers-color-scheme: dark) {
+  h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    background-color: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #e6edf3;
+  }
+}

@@ -1,0 +1,5 @@
+<div class="codeblock" data-lang="{{ .Type | default "text" }}">
+  <button class="copy-btn" type="button" aria-label="Copy code">Copy</button>
+
+  <pre><code class="language-{{ .Type | default "text" }}">{{- .Inner | strings.TrimRight "\n" | htmlEscape -}}</code></pre>
+</div>
